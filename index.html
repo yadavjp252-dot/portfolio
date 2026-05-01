@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jay Prakash Yadav â GTM and Product Marketing</title>
+  <title>Jay Prakash Yadav &mdash; GTM and Product Marketing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -36,7 +36,7 @@
       overflow-x: hidden;
     }
 
-    /* ââ NOISE OVERLAY ââ */
+    /* &#9472;&#9472; NOISE OVERLAY &#9472;&#9472; */
     body::before {
       content: '';
       position: fixed;
@@ -47,7 +47,7 @@
       opacity: 0.4;
     }
 
-    /* ââ GLOW BLOBS ââ */
+    /* &#9472;&#9472; GLOW BLOBS &#9472;&#9472; */
     .glow-1, .glow-2 {
       position: fixed;
       border-radius: 50%;
@@ -59,7 +59,7 @@
     .glow-1 { width: 600px; height: 600px; background: #3b82f6; top: -200px; left: -100px; }
     .glow-2 { width: 500px; height: 500px; background: #0ea5e9; bottom: 0; right: -150px; }
 
-    /* ââ LAYOUT ââ */
+    /* &#9472;&#9472; LAYOUT &#9472;&#9472; */
     .wrap {
       position: relative;
       z-index: 1;
@@ -68,7 +68,7 @@
       padding: 0 28px;
     }
 
-    /* ââ NAV ââ */
+    /* &#9472;&#9472; NAV &#9472;&#9472; */
     nav {
       position: sticky;
       top: 0;
@@ -112,7 +112,7 @@
     }
     .nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
 
-    /* ââ HERO ââ */
+    /* &#9472;&#9472; HERO &#9472;&#9472; */
     .hero {
       padding: 100px 0 80px;
     }
@@ -214,7 +214,7 @@
     }
     .btn-ghost:hover { color: var(--text); border-color: rgba(255,255,255,0.15); transform: translateY(-1px); }
 
-    /* ââ STATS BAR ââ */
+    /* &#9472;&#9472; STATS BAR &#9472;&#9472; */
     .stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -255,7 +255,7 @@
       font-weight: 400;
     }
 
-    /* ââ SECTION ââ */
+    /* &#9472;&#9472; SECTION &#9472;&#9472; */
     .section-header {
       display: flex;
       align-items: center;
@@ -277,7 +277,7 @@
       background: var(--border);
     }
 
-    /* ââ CARDS ââ */
+    /* &#9472;&#9472; CARDS &#9472;&#9472; */
     .grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -372,7 +372,7 @@
 
     .card.featured p { font-size: 14px; max-width: 600px; }
 
-    /* ââ METRIC CHIP ââ */
+    /* &#9472;&#9472; METRIC CHIP &#9472;&#9472; */
     .metric {
       display: inline-flex;
       align-items: center;
@@ -389,7 +389,7 @@
 
     .metric svg { width: 11px; height: 11px; flex-shrink: 0; }
 
-    /* ââ TAGS ââ */
+    /* &#9472;&#9472; TAGS &#9472;&#9472; */
     .tags {
       display: flex;
       flex-wrap: wrap;
@@ -406,7 +406,7 @@
       border-radius: 4px;
     }
 
-    /* ââ STACK PILLS ââ */
+    /* &#9472;&#9472; STACK PILLS &#9472;&#9472; */
     .stack {
       display: flex;
       flex-wrap: wrap;
@@ -419,7 +419,7 @@
       color: rgba(99,179,237,0.8);
     }
 
-    /* ââ ABOUT STRIP ââ */
+    /* &#9472;&#9472; ABOUT STRIP &#9472;&#9472; */
     .about {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -457,7 +457,7 @@
       line-height: 1.7;
     }
 
-    /* ââ FOOTER ââ */
+    /* &#9472;&#9472; FOOTER &#9472;&#9472; */
     footer {
       border-top: 1px solid var(--border);
       padding: 32px 0 48px;
@@ -489,7 +489,7 @@
     }
     .footer-links a:hover { color: var(--accent); }
 
-    /* ââ FADE IN ââ */
+    /* &#9472;&#9472; FADE IN &#9472;&#9472; */
     .fade-in {
       opacity: 0;
       transform: translateY(16px);
@@ -507,7 +507,7 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ââ RESPONSIVE ââ */
+    /* &#9472;&#9472; RESPONSIVE &#9472;&#9472; */
     @media (max-width: 640px) {
       .grid { grid-template-columns: 1fr; }
       .card.featured { grid-column: 1; }
@@ -518,8 +518,11 @@
   </style>
 </head>
 <body>
+
 <div class="glow-1"></div>
 <div class="glow-2"></div>
+
+<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a class="nav-logo" href="#">Jay Prakash Yadav</a>
@@ -529,6 +532,8 @@
     </a>
   </div>
 </nav>
+
+<!-- HERO -->
 <div class="wrap">
   <section class="hero">
     <div class="hero-eyebrow">
@@ -538,7 +543,7 @@
     <h1>GTM and Product<br/>Marketing</h1>
     <p class="hero-sub">
       Most B2B marketing is built on assumptions, not on how buyers actually decide.
-      I've spent the last year fixing that gap â running discovery conversations,
+      I've spent the last year fixing that gap &mdash; running discovery conversations,
       rebuilding messaging around <strong>real buyer language</strong>, and designing
       outbound systems that connect product to pipeline.
     </p>
@@ -556,13 +561,15 @@
       </a>
     </div>
   </section>
+
+  <!-- STATS: 6 stats, 3x2 grid, no contradictions -->
   <div class="stats">
     <div class="stat">
       <div class="stat-value"><span>50+</span></div>
       <div class="stat-label">Buyer discovery conversations</div>
     </div>
     <div class="stat">
-      <div class="stat-value"><span>6â17%</span></div>
+      <div class="stat-value"><span>6&#x2192;17%</span></div>
       <div class="stat-label">Reply rate lift via messaging rebuild</div>
     </div>
     <div class="stat">
@@ -582,15 +589,20 @@
       <div class="stat-label">Inquiry conversion improvement</div>
     </div>
   </div>
+
+  <!-- WORK -->
   <div class="section-header">
     <span class="section-label">Work</span>
     <div class="section-line"></div>
   </div>
+
   <div class="grid">
+
+    <!-- FEATURED: B2B Messaging Rebuild -->
     <a class="card featured fade-in" href="https://www.notion.so/Messaging-and-Pipeline-Rebuild-B2B-Services-Company-32e29c63b773800cb394d78188573b82" target="_blank">
       <div class="card-header">
         <span class="card-type">Messaging Rebuild</span>
-        <span class="card-arrow">â</span>
+        <span class="card-arrow">&#x2197;</span>
       </div>
       <h2>Messaging and Pipeline Rebuild: B2B Services Company</h2>
       <p>Ran 50+ buyer discovery conversations and found the core problem: the company was selling process and features while buyers were shopping for outcomes and certainty. Rebuilt the entire messaging architecture from scratch. Rewrote sequences, repositioned the ICP, and redesigned the outbound flow. Reply rate moved from 6% to 17%. Contributed to $660K+ in closed B2B revenue.</p>
@@ -604,10 +616,12 @@
         <span class="tag">Outbound Design</span>
       </div>
     </a>
+
+    <!-- KYRO -->
     <a class="card fade-in" href="https://www.notion.so/Kyro-BioPharma-Outbound-System-Build-32e29c63b773806080bfe57a8121fe55" target="_blank">
       <div class="card-header">
         <span class="card-type">Outbound Engine</span>
-        <span class="card-arrow">â</span>
+        <span class="card-arrow">&#x2197;</span>
       </div>
       <h2>Kyro BioPharma Solutions</h2>
       <p>Built a two-sided cold outbound system connecting Apollo, n8n, and Wix across three pharma buyer segments: CDMOs, biologics, and cell and gene therapy firms. Five-touch sequence across email and phone before initial contact. Achieved 6% positive reply rate on 2,000 cold emails to a notoriously hard-to-reach audience.</p>
@@ -622,10 +636,12 @@
         <span class="tag">Pharma ICP Segmentation</span>
       </div>
     </a>
+
+    <!-- SPLINGLE -->
     <a class="card fade-in" href="https://www.notion.so/Splingle-Messaging-and-GTM-Build-35329c63b77380f28524e6d07e1fdcc9" target="_blank">
       <div class="card-header">
         <span class="card-type">Funnel Architecture</span>
-        <span class="card-arrow">â</span>
+        <span class="card-arrow">&#x2197;</span>
       </div>
       <h2>Splingle (EdTech)</h2>
       <p>No value proposition, no funnel, no sales motion. Rebuilt messaging around measurable outcomes, designed the full conversion funnel, and created a structured pitch for the enrollment team.</p>
@@ -639,10 +655,12 @@
         <span class="tag">Zero Spend Demand Gen</span>
       </div>
     </a>
+
+    <!-- INTERCITY -->
     <a class="card fade-in" href="https://www.notion.so/GTM-Scoping-Early-Stage-Intercity-Mobility-Startup-33529c63b77380639435d687bbf2c28f" target="_blank">
       <div class="card-header">
         <span class="card-type">GTM Scoping</span>
-        <span class="card-arrow">â</span>
+        <span class="card-arrow">&#x2197;</span>
       </div>
       <h2>Early-Stage Intercity Mobility Startup</h2>
       <p>Founder wanted to run ads immediately. Built a Phase Zero validation framework first: demand validation, messaging repositioning, and a four-phase near-zero-budget demand gen plan before any spend was committed. The principle: marketing budget is a multiplier, not a starting point.</p>
@@ -652,10 +670,12 @@
         <span class="tag">Unit Economics</span>
       </div>
     </a>
+
+    <!-- VISITLY -->
     <a class="card fade-in" href="https://www.notion.so/Visitly-Positioning-Teardown-32e29c63b77380ff9dd5d030543f966b" target="_blank">
       <div class="card-header">
         <span class="card-type">Positioning Teardown</span>
-        <span class="card-arrow">â</span>
+        <span class="card-arrow">&#x2197;</span>
       </div>
       <h2>Visitly</h2>
       <p>Real enterprise differentiation buried under commodity messaging. Diagnosed the gap between a product with genuine compliance hooks and copy that read like every other visitor management tool. Repositioned around control and audit readiness instead of visitor flow management.</p>
@@ -665,42 +685,50 @@
         <span class="tag">Homepage Strategy</span>
       </div>
     </a>
+
+    <!-- INSTAHYRE -->
     <a class="card fade-in" href="https://www.notion.so/Instahyre-Messaging-Teardown-32e29c63b77380918492fa0673febaae" target="_blank">
       <div class="card-header">
         <span class="card-type">Messaging Teardown</span>
-        <span class="card-arrow">â</span>
+        <span class="card-arrow">&#x2197;</span>
       </div>
       <h2>Instahyre</h2>
-      <p>Real differentiator buried under generic AI hiring platform copy. Rebuilt the homepage narrative around what users' stop suffering from rather than what the platform can do. Moved from feature listing to pain elimination in the first line.</p>
+      <p>Real differentiator buried under generic AI hiring platform copy. Rebuilt the homepage narrative around what users stop suffering from rather than what the platform can do. Moved from feature listing to pain elimination in the first line.</p>
       <div class="tags">
         <span class="tag">Messaging Architecture</span>
         <span class="tag">Buyer Psychology</span>
         <span class="tag">Homepage Flow</span>
       </div>
     </a>
+
   </div>
+
+  <!-- ABOUT -->
   <div class="section-header">
     <span class="section-label">Background</span>
     <div class="section-line"></div>
   </div>
+
   <div class="about">
     <div class="about-block">
-      <h3><span class="icon">ð</span> Education</h3>
+      <h3><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3.33 1.33 6.67 1.33 10 0v-5"/></svg></span> Education</h3>
       <p>MBA, Symbiosis Institute of Management Studies, Pune (2025). BA in Economics and Computer Science, University of Delhi (2021).</p>
     </div>
     <div class="about-block">
-      <h3><span class="icon">âï¸</span> Tools</h3>
+      <h3><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></span> Tools</h3>
       <p>Apollo, n8n, Zapier, Notion, Google Sheets, LinkedIn Sales Navigator, Wix, Carrd, Buffer, Cursor, Claude, ChatGPT.</p>
     </div>
     <div class="about-block">
-      <h3><span class="icon">ð®</span> Focus Areas</h3>
+      <h3><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span> Focus Areas</h3>
       <p>ICP definition, positioning and messaging architecture, outbound system design, customer discovery, funnel analysis, competitive positioning.</p>
     </div>
     <div class="about-block">
-      <h3><span class="icon">ð</span> Currently</h3>
-      <p>Applying GTM architecture to a 0 to 1 GyP compliance product in the $1.6B pharma software market. Owning positioning, outbound system design, and product specification. Building for the gap between spreadsheets and Veeva.</p>
+      <h3><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></span> Currently</h3>
+      <p>Applying GTM architecture to a 0 to 1 GxP compliance product in the $1.6B pharma software market. Owning positioning, outbound system design, and product specification. Building for the gap between spreadsheets and Veeva.</p>
     </div>
   </div>
+
+  <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
       <p>Open to Product Marketing and Growth roles at early-stage B2B SaaS.</p>
@@ -710,6 +738,7 @@
       </div>
     </div>
   </footer>
-</div>
+
+</div><!-- /wrap -->
 </body>
 </html>
