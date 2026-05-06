@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --bg:         #080c14;
       --surface:    #0e1420;
@@ -21,8 +20,10 @@
       --muted:      #718096;
       --tag-bg:     rgba(99,179,237,0.10);
       --tag-text:   #90cdf4;
+      --metric-bg:  rgba(72,187,120,0.12);
+      --metric-border: rgba(72,187,120,0.3);
+      --metric-text:   #68d391;
     }
-
     html { scroll-behavior: smooth; }
     body {
       background: var(--bg);
@@ -32,8 +33,7 @@
       line-height: 1.7;
       min-height: 100vh;
     }
-
-    /* ── NAV ── */
+    /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
@@ -50,11 +50,9 @@
       transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--text); }
-
-    /* ── LAYOUT ── */
+    /* LAYOUT */
     .page { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-
-    /* ── HERO ── */
+    /* HERO */
     .hero {
       padding-top: 120px;
       padding-bottom: 60px;
@@ -80,17 +78,14 @@
       font-weight: 500; text-decoration: none; transition: all 0.2s; cursor: pointer;
       border: none;
     }
-    .btn-primary {
-      background: var(--accent); color: #080c14;
-    }
+    .btn-primary { background: var(--accent); color: #080c14; }
     .btn-primary:hover { background: #90cdf4; }
     .btn-ghost {
       background: transparent; color: var(--text);
       border: 1px solid var(--border-m);
     }
     .btn-ghost:hover { border-color: var(--border-h); background: var(--accent-dim); }
-
-    /* ── SECTION ── */
+    /* SECTION */
     section { padding: 60px 0; border-bottom: 1px solid var(--border-m); }
     section:last-of-type { border-bottom: none; }
     .section-label {
@@ -98,15 +93,13 @@
       text-transform: uppercase; color: var(--accent); margin-bottom: 2rem;
     }
     h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
-
-    /* ── ABOUT BLOCKS ── */
+    /* ABOUT BLOCKS */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1.25rem;
     }
     @media (max-width: 600px) { .about-grid { grid-template-columns: 1fr; } }
-
     .about-block {
       background: var(--surface);
       border: 1px solid var(--border-m);
@@ -120,8 +113,7 @@
       margin-bottom: 0.6rem;
     }
     .about-block p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
-
-    /* ── SKILLS TAGS ── */
+    /* SKILLS TAGS */
     .skills-group { margin-bottom: 1.5rem; }
     .skills-group-label {
       font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em;
@@ -134,8 +126,7 @@
       padding: 0.3rem 0.75rem; border-radius: 20px;
       font-size: 0.78rem; font-weight: 500;
     }
-
-    /* ── WORK CARDS ── */
+    /* WORK CARDS */
     .work-list { display: flex; flex-direction: column; gap: 1.25rem; }
     .work-card {
       background: var(--surface);
@@ -143,19 +134,49 @@
       border-radius: 10px;
       padding: 1.5rem;
       transition: border-color 0.2s;
+      text-decoration: none;
+      display: block;
+      color: inherit;
     }
     .work-card:hover { border-color: var(--border-h); }
-    .work-card-header {
-      display: flex; justify-content: space-between; align-items: flex-start;
-      gap: 1rem; margin-bottom: 0.75rem; flex-wrap: wrap;
+    .work-card-top {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 0.85rem;
     }
-    .work-card-title { font-weight: 600; font-size: 1rem; }
-    .work-card-meta { font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
-    .work-card-sub { font-size: 0.85rem; color: var(--accent); margin-bottom: 0.75rem; }
-    .work-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
-    .work-card-tags { margin-top: 1rem; }
-
-    /* ── PROJECT CARDS ── */
+    .work-card-badge {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid rgba(99,179,237,0.2);
+      padding: 0.2rem 0.6rem; border-radius: 4px;
+    }
+    .work-card-ext {
+      font-size: 0.85rem; color: var(--muted);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .work-card:hover .work-card-ext { color: var(--accent); }
+    .work-card-title {
+      font-size: 1.0rem; font-weight: 600;
+      color: var(--text); margin-bottom: 0.65rem;
+      line-height: 1.35;
+    }
+    .work-card p {
+      font-size: 0.88rem; color: var(--muted); line-height: 1.65;
+      margin-bottom: 0.9rem;
+    }
+    .work-card-metric {
+      display: flex; align-items: center; gap: 0.5rem;
+      background: var(--metric-bg);
+      border: 1px solid var(--metric-border);
+      border-radius: 6px;
+      padding: 0.5rem 0.85rem;
+      font-size: 0.82rem; font-weight: 500;
+      color: var(--metric-text);
+      margin-bottom: 1rem;
+    }
+    .work-card-metric::before { content: "↑"; font-weight: 700; }
+    .work-card-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    /* PROJECT CARDS */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -177,17 +198,8 @@
     }
     .project-card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; }
     .project-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; flex: 1; }
-    .project-card-footer {
-      margin-top: 1.25rem; display: flex; gap: 0.6rem; flex-wrap: wrap;
-    }
-    .project-link {
-      font-size: 0.78rem; color: var(--accent); text-decoration: none;
-      border: 1px solid rgba(99,179,237,0.25); padding: 0.25rem 0.6rem;
-      border-radius: 4px; transition: all 0.2s;
-    }
-    .project-link:hover { background: var(--accent-dim); border-color: var(--border-h); }
-
-    /* ── CONTACT ── */
+    .project-card-footer { margin-top: 1.25rem; display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    /* CONTACT */
     .contact-grid { display: flex; flex-direction: column; gap: 0.75rem; }
     .contact-row {
       display: flex; align-items: center; gap: 0.75rem;
@@ -196,8 +208,7 @@
     .contact-row a { color: var(--accent); text-decoration: none; }
     .contact-row a:hover { text-decoration: underline; }
     .contact-row svg { flex-shrink: 0; }
-
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer {
       padding: 2rem 0; text-align: center;
       font-size: 0.8rem; color: var(--muted);
@@ -220,7 +231,7 @@
 
 <main class="page">
 
-  <!-- ── HERO ── -->
+  <!-- HERO -->
   <section class="hero">
     <p class="hero-eyebrow">GTM &amp; Product Marketing</p>
     <h1>Jay Prakash Yadav</h1>
@@ -234,7 +245,7 @@
     </div>
   </section>
 
-  <!-- ── ABOUT ── -->
+  <!-- ABOUT -->
   <section id="about">
     <p class="section-label">About</p>
     <div class="about-grid">
@@ -242,7 +253,7 @@
       <div class="about-block">
         <h3>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </span> Currently
+          Currently
         </h3>
         <p>Open to full-time Product Marketing and Growth roles at early-stage B2B SaaS companies.</p>
       </div>
@@ -250,15 +261,15 @@
       <div class="about-block">
         <h3>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-          </span> Education
+          Education
         </h3>
-        <p>MBA, University of Illinois Urbana-Champaign. B.Tech Economics + CS, IIT Jodhpur.</p>
+        <p>MBA, Symbiosis Institute of Management Studies, Pune (2025). BA in Economics and Computer Science, University of Delhi (2021).</p>
       </div>
 
       <div class="about-block">
         <h3>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </span> Stack
+          Stack
         </h3>
         <p>Clay, Apollo, HubSpot, Notion, Perplexity, Claude/GPT. Comfortable in SQL and light Python for analysis.</p>
       </div>
@@ -266,7 +277,7 @@
       <div class="about-block">
         <h3>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-          </span> How I work
+          How I work
         </h3>
         <p>Systems thinker. I build repeatable plays, not one-off deliverables. Prefer async-first, output-oriented teams.</p>
       </div>
@@ -274,7 +285,7 @@
     </div>
   </section>
 
-  <!-- ── SKILLS ── -->
+  <!-- SKILLS -->
   <section id="skills">
     <p class="section-label">Skills</p>
 
@@ -324,49 +335,87 @@
     </div>
   </section>
 
-  <!-- ── WORK ── -->
+  <!-- WORK -->
   <section id="work">
     <p class="section-label">Work</p>
     <div class="work-list">
 
-      <div class="work-card">
-        <div class="work-card-header">
-          <span class="work-card-title">GTM Strategist &amp; Analyst Intern</span>
-          <span class="work-card-meta">May 2024 &ndash; Aug 2024</span>
+      <a class="work-card" href="https://www.notion.so/Messaging-and-Pipeline-Rebuild-B2B-Services-Company-32e29c63b773800cb394d78188573b82" target="_blank">
+        <div class="work-card-top">
+          <span class="work-card-badge">Messaging Rebuild</span>
+          <span class="work-card-ext">&#8599;</span>
         </div>
-        <p class="work-card-sub">Anteriad &mdash; B2B Data &amp; Marketing Intelligence</p>
-        <p>Led competitive intelligence research across 8 vendors; findings shaped 2025 product roadmap priorities. Built a SQL-based data pipeline reducing lead processing time by 40%. Developed an AI-assisted ICP segmentation model improving lead qualification accuracy by 25%.</p>
+        <h3 class="work-card-title">Messaging and Pipeline Rebuild: B2B Services Company</h3>
+        <p>Ran 50+ buyer discovery conversations and found the core problem: the company was selling process and features while buyers were shopping for outcomes and certainty. Rebuilt the entire messaging architecture from scratch. Rewrote sequences, repositioned the ICP, and redesigned the outbound flow. Reply rate moved from 6% to 17%. Contributed to $660K+ in closed B2B revenue.</p>
+        <div class="work-card-metric">Reply rate lifted from 6% to 17% across rebuilt outbound sequence</div>
         <div class="work-card-tags">
-          <div class="tags">
-            <span class="tag">Competitive Intelligence</span>
-            <span class="tag">SQL</span>
-            <span class="tag">ICP Segmentation</span>
-            <span class="tag">B2B Data</span>
-          </div>
+          <span class="tag">Discovery Research</span>
+          <span class="tag">Messaging Architecture</span>
+          <span class="tag">Outbound Design</span>
         </div>
-      </div>
+      </a>
 
-      <div class="work-card">
-        <div class="work-card-header">
-          <span class="work-card-title">Market Research Analyst</span>
-          <span class="work-card-meta">Jul 2020 &ndash; May 2022</span>
+      <a class="work-card" href="https://www.notion.so/Splingle-Messaging-and-GTM-Build-35329c63b77380f28524e6d07e1fdcc9" target="_blank">
+        <div class="work-card-top">
+          <span class="work-card-badge">Funnel Architecture</span>
+          <span class="work-card-ext">&#8599;</span>
         </div>
-        <p class="work-card-sub">EXL Service &mdash; Analytics &amp; Digital Operations</p>
-        <p>Conducted market sizing and competitive analysis for insurance and healthcare verticals. Built dashboards tracking 15+ KPIs for C-suite reporting. Automated recurring research workflows saving 6 hours per week per analyst.</p>
+        <h3 class="work-card-title">Splingle (EdTech)</h3>
+        <p>No value proposition, no funnel, no sales motion. Rebuilt messaging around measurable outcomes, designed the full conversion funnel, and created a structured pitch for the enrollment team.</p>
+        <div class="work-card-metric">250+ qualified leads and 23% conversion lift at zero ad spend</div>
         <div class="work-card-tags">
-          <div class="tags">
-            <span class="tag">Market Research</span>
-            <span class="tag">Analytics</span>
-            <span class="tag">Healthcare</span>
-            <span class="tag">Insurance</span>
-          </div>
+          <span class="tag">Messaging</span>
+          <span class="tag">Funnel Design</span>
+          <span class="tag">Zero Spend Demand Gen</span>
         </div>
-      </div>
+      </a>
+
+      <a class="work-card" href="https://www.notion.so/GTM-Scoping-Early-Stage-Intercity-Mobility-Startup-33529c63b77380639435d687bbf2c28f" target="_blank">
+        <div class="work-card-top">
+          <span class="work-card-badge">GTM Scoping</span>
+          <span class="work-card-ext">&#8599;</span>
+        </div>
+        <h3 class="work-card-title">Early-Stage Intercity Mobility Startup</h3>
+        <p>Founder wanted to run ads immediately. Built a Phase Zero validation framework first: demand validation, messaging repositioning, and a four-phase near-zero-budget demand gen plan before any spend was committed. The principle: marketing budget is a multiplier, not a starting point.</p>
+        <div class="work-card-tags">
+          <span class="tag">GTM Strategy</span>
+          <span class="tag">Demand Validation</span>
+          <span class="tag">Unit Economics</span>
+        </div>
+      </a>
+
+      <a class="work-card" href="https://www.notion.so/Visitly-Positioning-Teardown-32e29c63b77380ff9dd5d030543f966b" target="_blank">
+        <div class="work-card-top">
+          <span class="work-card-badge">Positioning Teardown</span>
+          <span class="work-card-ext">&#8599;</span>
+        </div>
+        <h3 class="work-card-title">Visitly</h3>
+        <p>Real enterprise differentiation buried under commodity messaging. Diagnosed the gap between a product with genuine compliance hooks and copy that read like every other visitor management tool. Repositioned around control and audit readiness instead of visitor flow management.</p>
+        <div class="work-card-tags">
+          <span class="tag">Competitive Positioning</span>
+          <span class="tag">Enterprise Messaging</span>
+          <span class="tag">Homepage Strategy</span>
+        </div>
+      </a>
+
+      <a class="work-card" href="https://www.notion.so/Instahyre-Messaging-Teardown-32e29c63b77380918492fa0673febaae" target="_blank">
+        <div class="work-card-top">
+          <span class="work-card-badge">Messaging Teardown</span>
+          <span class="work-card-ext">&#8599;</span>
+        </div>
+        <h3 class="work-card-title">Instahyre</h3>
+        <p>Real differentiator buried under generic AI hiring platform copy. Rebuilt the homepage narrative around what users stop suffering from rather than what the platform can do. Moved from feature listing to pain elimination in the first line.</p>
+        <div class="work-card-tags">
+          <span class="tag">Messaging Architecture</span>
+          <span class="tag">Buyer Psychology</span>
+          <span class="tag">Homepage Flow</span>
+        </div>
+      </a>
 
     </div>
   </section>
 
-  <!-- ── PROJECTS ── -->
+  <!-- PROJECTS -->
   <section id="projects">
     <p class="section-label">Projects</p>
     <div class="projects-grid">
@@ -406,7 +455,7 @@
     </div>
   </section>
 
-  <!-- ── CONTACT ── -->
+  <!-- CONTACT -->
   <section id="contact">
     <p class="section-label">Contact</p>
     <h2>Let&rsquo;s connect</h2>
