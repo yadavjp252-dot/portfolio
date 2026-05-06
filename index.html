@@ -36,7 +36,7 @@
       overflow-x: hidden;
     }
 
-    /* &#9472;&#9472; NOISE OVERLAY &#9472;&#9472; */
+    /* ── NOISE OVERLAY ── */
     body::before {
       content: '';
       position: fixed;
@@ -47,7 +47,7 @@
       opacity: 0.4;
     }
 
-    /* &#9472;&#9472; GLOW BLOBS &#9472;&#9472; */
+    /* ── GLOW BLOBS ── */
     .glow-1, .glow-2 {
       position: fixed;
       border-radius: 50%;
@@ -59,7 +59,7 @@
     .glow-1 { width: 600px; height: 600px; background: #3b82f6; top: -200px; left: -100px; }
     .glow-2 { width: 500px; height: 500px; background: #0ea5e9; bottom: 0; right: -150px; }
 
-    /* &#9472;&#9472; LAYOUT &#9472;&#9472; */
+    /* ── LAYOUT ── */
     .wrap {
       position: relative;
       z-index: 1;
@@ -68,7 +68,7 @@
       padding: 0 28px;
     }
 
-    /* &#9472;&#9472; NAV &#9472;&#9472; */
+    /* ── NAV ── */
     nav {
       position: sticky;
       top: 0;
@@ -112,7 +112,7 @@
     }
     .nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
 
-    /* &#9472;&#9472; HERO &#9472;&#9472; */
+    /* ── HERO ── */
     .hero {
       padding: 100px 0 80px;
     }
@@ -214,7 +214,7 @@
     }
     .btn-ghost:hover { color: var(--text); border-color: rgba(255,255,255,0.15); transform: translateY(-1px); }
 
-    /* &#9472;&#9472; STATS BAR &#9472;&#9472; */
+    /* ── STATS BAR ── */
     .stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -255,7 +255,7 @@
       font-weight: 400;
     }
 
-    /* &#9472;&#9472; SECTION &#9472;&#9472; */
+    /* ── SECTION ── */
     .section-header {
       display: flex;
       align-items: center;
@@ -277,7 +277,7 @@
       background: var(--border);
     }
 
-    /* &#9472;&#9472; CARDS &#9472;&#9472; */
+    /* ── CARDS ── */
     .grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -372,7 +372,7 @@
 
     .card.featured p { font-size: 14px; max-width: 600px; }
 
-    /* &#9472;&#9472; METRIC CHIP &#9472;&#9472; */
+    /* ── METRIC CHIP ── */
     .metric {
       display: inline-flex;
       align-items: center;
@@ -389,7 +389,7 @@
 
     .metric svg { width: 11px; height: 11px; flex-shrink: 0; }
 
-    /* &#9472;&#9472; TAGS &#9472;&#9472; */
+    /* ── TAGS ── */
     .tags {
       display: flex;
       flex-wrap: wrap;
@@ -406,7 +406,7 @@
       border-radius: 4px;
     }
 
-    /* &#9472;&#9472; STACK PILLS &#9472;&#9472; */
+    /* ── STACK PILLS ── */
     .stack {
       display: flex;
       flex-wrap: wrap;
@@ -419,7 +419,7 @@
       color: rgba(99,179,237,0.8);
     }
 
-    /* &#9472;&#9472; ABOUT STRIP &#9472;&#9472; */
+    /* ── ABOUT STRIP ── */
     .about {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -457,7 +457,7 @@
       line-height: 1.7;
     }
 
-    /* &#9472;&#9472; FOOTER &#9472;&#9472; */
+    /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
       padding: 32px 0 48px;
@@ -489,7 +489,7 @@
     }
     .footer-links a:hover { color: var(--accent); }
 
-    /* &#9472;&#9472; FADE IN &#9472;&#9472; */
+    /* ── FADE IN ── */
     .fade-in {
       opacity: 0;
       transform: translateY(16px);
@@ -507,7 +507,7 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* &#9472;&#9472; RESPONSIVE &#9472;&#9472; */
+    /* ── RESPONSIVE ── */
     @media (max-width: 640px) {
       .grid { grid-template-columns: 1fr; }
       .card.featured { grid-column: 1; }
@@ -614,26 +614,6 @@
         <span class="tag">Discovery Research</span>
         <span class="tag">Messaging Architecture</span>
         <span class="tag">Outbound Design</span>
-      </div>
-    </a>
-
-    <!-- KYRO -->
-    <a class="card fade-in" href="https://www.notion.so/Kyro-BioPharma-Outbound-System-Build-32e29c63b773806080bfe57a8121fe55" target="_blank">
-      <div class="card-header">
-        <span class="card-type">Outbound Engine</span>
-        <span class="card-arrow">&#x2197;</span>
-      </div>
-      <h2>Kyro BioPharma Solutions</h2>
-      <p>Built a two-sided cold outbound system connecting Apollo, n8n, and Wix across three pharma buyer segments: CDMOs, biologics, and cell and gene therapy firms. Five-touch sequence across email and phone before initial contact. Achieved 6% positive reply rate on 2,000 cold emails to a notoriously hard-to-reach audience.</p>
-      <div class="metric">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
-        6% positive reply rate on pharma cold outbound
-      </div>
-      <div class="stack">
-        <span class="tag">Apollo</span>
-        <span class="tag">n8n</span>
-        <span class="tag">Wix API</span>
-        <span class="tag">Pharma ICP Segmentation</span>
       </div>
     </a>
 
